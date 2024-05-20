@@ -4,11 +4,27 @@ const squareElment = document.createElement("div")
 
 const myButton = document.querySelector("body > header > nav > div > div > div.pe-3 > button")
 
-myButton.addEventListener("click", gridGenerator);
+let bombsCells = []
+
+function getRandomInt(min, max) {
+    return min + Math.floor(Math.random() * (max - min + 1));
+}
+
+for (let index = 1; index <= 16; index++) {
+    const bombNum = getRandomInt(1, 16)
+    bombsCells.push(bombNum)
     
+}
+
+
+
+
+//TODO Greed generator function    
 function gridGenerator() {
 
     gridElement.innerHTML = '';
+
+
 
     for (let index = 1; index <= 100; index++) {
 
@@ -35,3 +51,10 @@ function gridGenerator() {
         }
     
     }
+    
+
+    
+//! Click to generate grid
+myButton.addEventListener("click", gridGenerator);
+
+
