@@ -4,25 +4,21 @@ const squareElment = document.createElement("div")
 
 const myButton = document.querySelector("body > header > nav > div > div > div.pe-3 > button")
 
-let bombsCells = []
+
 
 function getRandomInt(min, max) {
     return min + Math.floor(Math.random() * (max - min + 1));
 }
 
-// for (let index = 1; index <= 16; index++) {
-//     const bombNum = getRandomInt(1, 16)
-//     bombsCells.push(bombNum)
-    
-// }
-
-while (bombsCells.length < 16) {
-
-    let bombNum = getRandomInt(1, 16);
-    if (!bombsCells.includes(bombNum)) {
-        bombsCells.push(bombNum);
+function generateUniqueBombs(numBombs, min, max) {
+    let bombsCells = [];
+    while (bombsCells.length < numBombs) {
+        let bombNum = getRandomInt(min, max);
+        if (!bombsCells.includes(bombNum)) {
+            bombsCells.push(bombNum);
+        }
     }
-
+    return bombsCells;
 }
 
 
@@ -32,7 +28,7 @@ function gridGenerator() {
 
     gridElement.innerHTML = '';
 
-
+    let bombsCells = []
 
     for (let index = 1; index <= 100; index++) {
 
