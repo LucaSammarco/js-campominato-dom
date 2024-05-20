@@ -18,5 +18,9 @@ Proviamo sempre prima con dei console.log() per capire se stiamo ricevendo i dat
             * Impostare HTML e css per la struttura che dovra essere gestita dal js
             * Creare un event listener per il bottone di avvio e usare un ciclo per generare le caselle.
             * aggiungere un event listener alle singole caselle che quando cliccate cambiano la classe e loggano il contento della casella.
-            
+            /// SECONDA PARTE
+
+            * Generare 16 numeri casuali che corrisponderanno alle caselle delle bombe (numeri diversi)
+            * Quando l utente clicca con la cella della bomba la cella diventa rossa (craere una classe per le celle bomba. ) E bisogna far terminare la partita (come fare?)
+            * Creare un contatore di celle -non bomba- cliccate (come fare?)
         
