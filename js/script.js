@@ -26,9 +26,13 @@ function generateUniqueBombs(numBombs, min, max) {
 //TODO Greed generator function    
 function gridGenerator() {
 
+        
     gridElement.innerHTML = '';
 
-    let bombsCells = []
+    let bombs = generateUniqueBombs(16, 1, 16)
+
+    console.log(bombs)
+
 
     for (let index = 1; index <= 100; index++) {
 
@@ -45,6 +49,7 @@ function gridGenerator() {
     
             
             squareElment.addEventListener("click", function () {
+
                 squareElment.classList.add("active")
                 console.log(index)
                 contentEl.classList.add("active");
