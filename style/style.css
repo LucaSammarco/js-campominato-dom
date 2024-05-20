@@ -1,0 +1,80 @@
+body {
+    position: relative;
+}
+
+.title {
+    color: black;
+    font-weight: bold;
+}
+
+
+footer{
+   
+  
+    background-color: white;
+    
+    width: 100%;
+    height: 80px;
+
+}
+
+.bg-color {
+    background-color: white;
+}
+
+main {
+    background-color: aquamarine;
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 150px);
+ 
+}
+
+
+
+.quadrato {
+
+    width: 450px;
+    height: 450px;
+    
+    padding: ;
+    /* display: flex; */
+}
+
+.griglia {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.quadratino {
+    flex-wrap: wrap;
+    width: calc((100% / 10)  );
+    height: calc((100% / 10) );
+    border: 2px solid black;
+    background-color: aquamarine;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    display: none;
+}
+
+.active {
+    background-color: lightskyblue;
+   
+    
+   
+}
+
+#myGrid > div.active > span {
+    display: block;
+}
