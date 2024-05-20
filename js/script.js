@@ -10,12 +10,20 @@ function getRandomInt(min, max) {
     return min + Math.floor(Math.random() * (max - min + 1));
 }
 
-for (let index = 1; index <= 16; index++) {
-    const bombNum = getRandomInt(1, 16)
-    bombsCells.push(bombNum)
+// for (let index = 1; index <= 16; index++) {
+//     const bombNum = getRandomInt(1, 16)
+//     bombsCells.push(bombNum)
     
-}
+// }
 
+while (bombsCells.length < 16) {
+
+    let bombNum = getRandomInt(1, 16);
+    if (!bombsCells.includes(bombNum)) {
+        bombsCells.push(bombNum);
+    }
+
+}
 
 
 
