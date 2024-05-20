@@ -25,55 +25,44 @@ function generateUniqueBombs(numBombs, min, max) {
 
 //TODO Greed generator function    
 function gridGenerator() {
-
-        
     gridElement.innerHTML = '';
 
-    let bombs = generateUniqueBombs(16, 1, 100)
-
-    console.log(bombs)
+    let bombs = generateUniqueBombs(16, 1, 100);
+    console.log(bombs);
 
     let punteggio = 0;
 
-
     for (let index = 1; index <= 100; index++) {
+        const squareElment = document.createElement("div");
+        squareElment.classList.add("quadratino");
 
-        
+        const contentEl = document.createElement("span");
+        contentEl.classList.add("content");
+        contentEl.append(index);
+        squareElment.appendChild(contentEl);
 
-            const squareElment = document.createElement("div");
-            squareElment.classList.add("quadratino");
-    
-            
-            const contentEl = document.createElement("span");
-            contentEl.classList.add("content");
-            contentEl.append(index);
-            squareElment.appendChild(contentEl);
-    
-            
-            squareElment.addEventListener("click", function ()) {
+        squareElment.addEventListener("click", function () {
+            if (squareElment.classList.contains("clicked")) {
+                return;
+            }
 
-                if (squareElement.classList.contains("clicked")) {
-                }
+            if (bombs.includes(index)) {
+                squareElment.classList.add("bomb");
+                squareElment.classList.add("clicked");
+                return;
+            } else {
+                punteggio++;
+                console.log(index);
+                squareElment.classList.add("noBomb");
+                squareElment.classList.add("clicked");
+            }
+        });
+
+        gridElement.appendChild(squareElment);
+    }
+}
 
 
-                if (bombs.includes(index)) {
-                squareElement.classList.add("bomb");
-                squareElement.classList.add("clicked");
-                
-                }
-
-                } else {
-                    squareElment.classList.add("noBomb");
-                    console.log(index);
-                }
-                }
-
-      
-            
-            gridElement.appendChild(squareElment);
-        }
-        
-        
     
     
 
