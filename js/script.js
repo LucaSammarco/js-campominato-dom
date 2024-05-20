@@ -33,6 +33,8 @@ function gridGenerator() {
 
     console.log(bombs)
 
+    let punteggio = 0;
+
 
     for (let index = 1; index <= 100; index++) {
 
@@ -48,26 +50,31 @@ function gridGenerator() {
             squareElment.appendChild(contentEl);
     
             
-            squareElment.addEventListener("click", function () {
+            squareElment.addEventListener("click", function ()) {
+
+                if (squareElement.classList.contains("clicked")) {
+                }
+
 
                 if (bombs.includes(index)) {
-                squareElment.classList.add("bomb");
-                console.log(index);
-
-               
+                squareElement.classList.add("bomb");
+                squareElement.classList.add("clicked");
+                
+                }
 
                 } else {
                     squareElment.classList.add("noBomb");
                     console.log(index);
                 }
-            }); 
+                }
 
       
             
             gridElement.appendChild(squareElment);
         }
+        
+        
     
-    }
     
 
     
