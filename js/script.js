@@ -45,8 +45,11 @@ function gridGenerator() {
 
         squareElment.addEventListener("click", function () {
             if (gameover == true)
+                
                 return;
-            
+                console.log("Il tuo punteggio è: " + punteggio);
+;
+
             if (bombs.includes(index)) {
                 squareElment.classList.add("bomb");
                 squareElment.classList.add("clicked");
@@ -66,7 +69,13 @@ function gridGenerator() {
         });
 
         gridElement.appendChild(squareElment);
+
+        
     }
+    
+
+    
+
 }
 
 
