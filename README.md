@@ -20,7 +20,13 @@ Proviamo sempre prima con dei console.log() per capire se stiamo ricevendo i dat
             * aggiungere un event listener alle singole caselle che quando cliccate cambiano la classe e loggano il contento della casella.
             /// SECONDA PARTE
 
-            * Generare 16 numeri casuali che corrisponderanno alle caselle delle bombe (numeri diversi)
-            * Quando l utente clicca con la cella della bomba la cella diventa rossa (craere una classe per le celle bomba. ) E bisogna far terminare la partita (come fare?)
+
+            In seguito l'utente clicca su una cella: se il numero è presente nella lista dei numeri generati - abbiamo calpestato una bomba - la cella si colora di rosso e la partita termina.
+Altrimenti la cella cliccata si colora di azzurro e l'utente può continuare a cliccare sulle altre celle.
+La partita termina quando il giocatore clicca su una bomba o quando raggiunge il numero massimo possibile di numeri consentiti (ovvero quando ha rivelato tutte le celle che non sono bombe).
+Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l’utente ha cliccato su una cella che non era una bomba.
+
+            * Generare 16 numeri casuali che corrisponderanno alle caselle delle bombe (numeri diversi) - Potrei fare questo con una funzione che crea un array di 16 numeri.
+            * Quando l utente clicca con la cella della bomba la cella diventa rossa (craere una classe per le celle bomba. ) E bisogna far terminare la partita (come fare?) - Potrei creare un ciclo while che appena clicki il numero presente nell'array bomba è uguale al numero dell index della cella creata - spunta il messaggio sotto.
             * Creare un contatore di celle -non bomba- cliccate (come fare?)
         
