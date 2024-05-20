@@ -4,6 +4,7 @@ const squareElment = document.createElement("div")
 
 const myButton = document.querySelector("body > header > nav > div > div > div.pe-3 > button")
 
+const resultElement = document.querySelector("#result");
 
 
 function getRandomInt(min, max) {
@@ -47,7 +48,7 @@ function gridGenerator() {
             if (gameover == true)
                 
                 return;
-                console.log("Il tuo punteggio è: " + punteggio);
+                resultElement.innerHTML = `<p>Game Over. Il tuo punteggio è: ${punteggio}</p>`;
 ;
 
             if (bombs.includes(index)) {
@@ -66,6 +67,11 @@ function gridGenerator() {
                 squareElment.classList.add("noBomb");
                 squareElment.classList.add("clicked");
             }
+
+            if (gameover === true) {
+                console.log("Il tuo punteggio è: " + punteggio);
+            }
+            
         });
 
         gridElement.appendChild(squareElment);
@@ -73,7 +79,6 @@ function gridGenerator() {
         
     }
     
-
     
 
 }
