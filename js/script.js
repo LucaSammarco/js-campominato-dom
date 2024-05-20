@@ -51,16 +51,18 @@ function gridGenerator() {
             squareElment.addEventListener("click", function () {
 
                 if (bombs.includes(index)) {
-                    
-                
                 squareElment.classList.add("bomb");
                 console.log(index);
+
+               
+
                 } else {
                     squareElment.classList.add("noBomb");
                     console.log(index);
                 }
             }); 
-    
+
+      
             
             gridElement.appendChild(squareElment);
         }
