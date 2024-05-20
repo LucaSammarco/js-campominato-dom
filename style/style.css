@@ -68,11 +68,15 @@ main {
     /* display: none; */
 }
 
-.active {
+.noBomb {
     background-color: lightskyblue;
    
     
    
+}
+
+.bomb {
+    background-color: red;
 }
 
 #myGrid > div.active > span {

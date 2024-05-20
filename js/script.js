@@ -29,7 +29,7 @@ function gridGenerator() {
         
     gridElement.innerHTML = '';
 
-    let bombs = generateUniqueBombs(16, 1, 16)
+    let bombs = generateUniqueBombs(16, 1, 100)
 
     console.log(bombs)
 
@@ -53,9 +53,12 @@ function gridGenerator() {
                 if (bombs.includes(index)) {
                     
                 
-                squareElment.classList.add("active")
-                console.log(index)
-                contentEl.classList.add("active");}
+                squareElment.classList.add("bomb");
+                console.log(index);
+                } else {
+                    squareElment.classList.add("noBomb");
+                    console.log(index);
+                }
             }); 
     
             
