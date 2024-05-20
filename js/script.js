@@ -32,6 +32,8 @@ function gridGenerator() {
 
     let punteggio = 0;
 
+    let gameover = false;
+
     for (let index = 1; index <= 100; index++) {
         const squareElment = document.createElement("div");
         squareElment.classList.add("quadratino");
@@ -42,14 +44,19 @@ function gridGenerator() {
         squareElment.appendChild(contentEl);
 
         squareElment.addEventListener("click", function () {
+            if (gameover == true)
+                return;
+            
+            if (bombs.includes(index)) {
+                squareElment.classList.add("bomb");
+                squareElment.classList.add("clicked");
+                return gameover = true;
+
             if (squareElment.classList.contains("clicked")) {
                 return;
             }
 
-            if (bombs.includes(index)) {
-                squareElment.classList.add("bomb");
-                squareElment.classList.add("clicked");
-                return;
+           
             } else {
                 punteggio++;
                 console.log(index);
