@@ -50,9 +50,12 @@ function gridGenerator() {
             
             squareElment.addEventListener("click", function () {
 
+                if (bombs.includes(index)) {
+                    
+                
                 squareElment.classList.add("active")
                 console.log(index)
-                contentEl.classList.add("active");
+                contentEl.classList.add("active");}
             }); 
     
             
